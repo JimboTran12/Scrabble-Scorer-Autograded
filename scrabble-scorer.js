@@ -91,7 +91,7 @@ const scoringAlgorithms = [
 function scorerPrompt() {
    let choice = 3;
    let choices = [0, 1, 2];
-   while(!choices.includes(choice) || choice == "")  {
+   while(!choices.includes(choice))  {
       choice = Number(input.question("Which scoring algorithm would you like to use ?\n0 - Simple: One point per character\n1 - Vowel Bonus: Vowels are worth 3 points\n2 - Scrabble: Uses scrabble point system\nEnter 0, 1, or 2: "));
    }
    return scoringAlgorithms[choice];
